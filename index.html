@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Data: Vitoon's Info --><title>Vitoon Tienrungsri - Digital Card</title>
+    <!-- Tailwind CSS --><script src="https://cdn.tailwindcss.com"></script>
+    <!-- Design: Kept from V1 (Prompt Font) --><link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Design: Kept from V1 */
+        body {
+            font-family: 'Prompt', sans-serif;
+            background-color: #f3f4f6;
+        }
+        .profile-shadow {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+        /* Design: Kept from V1 (Purple/Indigo Gradient) */
+        .banner-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center py-10 px-4">
+
+    <!-- Main Container (Design: Kept from V1) --><div class="w-full max-w-md bg-white rounded-3xl shadow-2xl overflow-hidden relative">
+        
+        <!-- Header Banner (Design: Kept from V1) --><div class="h-40 banner-gradient relative">
+            <div class="absolute top-4 right-4 text-white opacity-80">
+                <!-- Share Icon (Optional) --><i class="fas fa-share-alt text-xl cursor-pointer hover:opacity-100 transition"></i>
+            </div>
+        </div>
+
+        <!-- Profile Section --><div class="px-6 relative">
+            <!-- Profile Image (Data: White Crane Logo) --><div class="relative -mt-16 mb-4 flex justify-center">
+                <div class="w-32 h-32 rounded-full border-4 border-white profile-shadow overflow-hidden bg-white flex items-center justify-center">
+                    <!-- Using White Crane Logo --><img src="https://i.postimg.cc/9Fw1jdsd/White-Crane-jpg.jpg" alt="Profile Picture" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <!-- Text Info (Data: Vitoon's Info + Company Info) --><div class="text-center mb-8">
+                <h1 class="text-2xl font-bold text-gray-800">Vitoon Tienrungsri</h1>
+                <p class="text-indigo-600 font-medium">President</p>
+                <!-- Company Info Below Title --><p class="text-gray-600 font-medium text-sm mt-2">WHITE CRANE AQUARIUM (THAILAND) CO.,LTD.</p>
+                <!-- Updated Company Address --><p class="text-gray-500 text-xs mt-1 px-4">
+                    332 Lat Pla Khao Rd, Chorakhe Bua, Lat Phrao, Bangkok ,Thailand , 10230
+                </p>
+            </div>
+
+            <!-- Action Buttons Grid (Updated: Website back, Map link updated) --><div class="grid grid-cols-4 gap-4 mb-8 px-2">
+                <!-- Call --><a href="tel:+66818703111" class="flex flex-col items-center gap-2 group">
+                    <div class="w-12 h-12 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center shadow-sm group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                        <i class="fas fa-phone-alt text-lg"></i>
+                    </div>
+                    <span class="text-xs text-gray-600">Call</span>
+                </a>
+                <!-- Email --><a href="mailto:vitoonwca@gmail.com" class="flex flex-col items-center gap-2 group">
+                    <div class="w-12 h-12 rounded-full bg-red-50 text-red-600 flex items-center justify-center shadow-sm group-hover:bg-red-600 group-hover:text-white transition-all duration-300">
+                        <i class="fas fa-envelope text-lg"></i>
+                    </div>
+                    <span class="text-xs text-gray-600">Email</span>
+                </a>
+                <!-- Map (Office) - LINK UPDATED --><a href="https://maps.app.goo.gl/FbHjdsSLMd222fSv7" target="_blank" class="flex flex-col items-center gap-2 group">
+                    <div class="w-12 h-12 rounded-full bg-green-50 text-green-600 flex items-center justify-center shadow-sm group-hover:bg-green-600 group-hover:text-white transition-all duration-300">
+                        <i class="fas fa-map-marker-alt text-lg"></i>
+                    </div>
+                    <span class="text-xs text-gray-600">Map</span>
+                </a>
+                <!-- Website - REPLACED Shop Map with Website --><a href="https://www.whitecraneaquarium.com/" target="_blank" class="flex flex-col items-center gap-2 group">
+                    <div class="w-12 h-12 rounded-full bg-purple-50 text-purple-600 flex items-center justify-center shadow-sm group-hover:bg-purple-600 group-hover:text-white transition-all duration-300">
+                        <i class="fas fa-globe text-lg"></i>
+                    </div>
+                    <span class="text-xs text-gray-600">Website</span>
+                </a>
+            </div>
+
+            <!-- Save Contact Button --><div class="mb-8">
+                <button onclick="downloadVCard()" class="w-full bg-gray-900 text-white py-3.5 rounded-xl font-semibold shadow-lg hover:bg-gray-800 active:scale-95 transition-all flex items-center justify-center gap-2">
+                    <i class="fas fa-user-plus"></i>
+                    Save Contact
+                </button>
+            </div>
+
+            <!-- Social Links List (as per previous request) --><div class="space-y-3 mb-8">
+                <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3 pl-1">Social Media</h3>
+                
+                <!-- Line --><a href="https://line.me/ti/p/~@Whitecraneshop" target="_blank" class="flex items-center p-3 rounded-xl bg-gray-50 hover:bg-green-50 border border-gray-100 hover:border-green-200 transition-all group">
+                    <div class="w-10 h-10 rounded-lg bg-[#06C755] text-white flex items-center justify-center mr-4 shadow-sm">
+                        <i class="fab fa-line text-xl"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="font-semibold text-gray-800 group-hover:text-[#06C755]">LINE Official</h4>
+                        <p class="text-xs text-gray-500">@Whitecraneshop</p>
+                    </div>
+                    <i class="fas fa-chevron-right text-gray-300 group-hover:text-[#06C755]"></i>
+                </a>
+
+                <!-- Facebook --><a href="https://www.facebook.com/whitecraneaquarium" target="_blank" class="flex items-center p-3 rounded-xl bg-gray-50 hover:bg-blue-50 border border-gray-100 hover:border-blue-200 transition-all group">
+                    <div class="w-10 h-10 rounded-lg bg-[#1877F2] text-white flex items-center justify-center mr-4 shadow-sm">
+                        <i class="fab fa-facebook-f text-xl"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="font-semibold text-gray-800 group-hover:text-[#1877F2]">Facebook</h4>
+                        <p class="text-xs text-gray-500">@whitecraneaquarium</p>
+                    </div>
+                    <i class="fas fa-chevron-right text-gray-300 group-hover:text-[#1877F2]"></i>
+                </a>
+                
+                <!-- YouTube --><a href="https://www.youtube.com/@whitecraneaquarium3713" target="_blank" class="flex items-center p-3 rounded-xl bg-gray-50 hover:bg-red-50 border border-gray-100 hover:border-red-200 transition-all group">
+                    <div class="w-10 h-10 rounded-lg bg-[#FF0000] text-white flex items-center justify-center mr-4 shadow-sm">
+                        <i class="fab fa-youtube text-xl"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="font-semibold text-gray-800 group-hover:text-[#FF0000]">YouTube</h4>
+                        <p class="text-xs text-gray-500">@whitecraneaquarium3713</p>
+                    </div>
+                    <i class="fas fa-chevron-right text-gray-300 group-hover:text-[#FF0000]"></i>
+                </a>
+            </div>
+
+        </div>
+        
+        <!-- Footer --><div class="bg-gray-50 py-4 text-center text-xs text-gray-400 border-t border-gray-100">
+             &copy; 2024 Vitoon Tienrungsri. All Rights Reserved.
+        </div>
+    </div>
+
+    <script>
+        // vCard Download Function (Data: Updated for Vitoon)
+        function downloadVCard() {
+            // Define vCard data
+            const vCardData = [
+                "BEGIN:VCARD",
+                "VERSION:3.0",
+                "N:Tienrungsri;Vitoon;;;", 
+                "FN:Vitoon Tienrungsri", 
+                "TITLE:President", 
+                "ORG:WHITE CRANE AQUARIUM (THAILAND) CO.,LTD.", 
+                "TEL;TYPE=CELL,VOICE:+66818703111", 
+                "EMAIL:vitoonwca@gmail.com", 
+                "ADR;TYPE=WORK,PREF:;;332 Lat Pla Khao Rd, Chorakhe Bua, Lat Phrao;Bangkok;Thailand;10230",
+                "URL;TYPE=WORK:https://www.whitecraneaquarium.com/", // Added website URL to vCard
+                "END:VCARD"
+            ].join("\n");
+
+            const blob = new Blob([vCardData], { type: "text/vcard;charset=utf-8" });
+            const downloadLink = document.createElement("a");
+            downloadLink.href = URL.createObjectURL(blob);
+            downloadLink.download = "Vitoon_Tienrungsri.vcf"; 
+            document.body.appendChild(downloadLink);
+            downloadLink.click();
+            document.body.removeChild(downloadLink);
+        }
+    </script>
+</body>
+</html>
